@@ -1,0 +1,44 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "gateway",
+    "applications": {
+      "blog": {
+        "applicationIndex": 1,
+        "clientFramework": "angular",
+        "serverPort": "8081"
+      },
+      "store": {
+        "applicationIndex": 2,
+        "clientFramework": "angular",
+        "serverPort": "8082"
+      }
+    },
+    "authenticationType": "oauth2",
+    "baseName": "gateway",
+    "buildTool": "maven",
+    "clientFramework": "angular",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "devServerPort": 4200,
+    "entities": [],
+    "jhipsterVersion": "8.8.0",
+    "languages": ["en"],
+    "microfrontends": [
+      {
+        "baseName": "blog"
+      },
+      {
+        "baseName": "store"
+      }
+    ],
+    "nativeLanguage": "en",
+    "packageName": "com.okta.developer.gateway",
+    "prodDatabaseType": "postgresql",
+    "reactive": true,
+    "serverPort": 8080,
+    "serviceDiscoveryType": "consul",
+    "skipUserManagement": true,
+    "testFrameworks": ["cypress"]
+  }
+}

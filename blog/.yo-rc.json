@@ -1,0 +1,28 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 1,
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "blog",
+    "buildTool": "maven",
+    "clientFramework": "angular",
+    "creationTimestamp": 1738970061977,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "devServerPort": 4201,
+    "enableHibernateCache": false,
+    "entities": ["Blog", "Post", "Tag"],
+    "jhipsterVersion": "8.8.0",
+    "jwtSecretKey": "ZDVlYWZjYjYxZmNhYjExM2I2MjJhZGUyNDIzODJhMjY0MWQwNGFkNzVhZGZjMDc2ZGI5NzU0NWZiODI3YWEwYWI1ZWMzNjRlNjljNTc1ZDJmMzczMWQzYjJmNTljODE4MWFhN2Y5Y2I3NzA0MGRjMzc3ZDQwMWQxODQwYjBhNTA=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1738966068000,
+    "nativeLanguage": "en",
+    "packageName": "com.okta.developer.blog",
+    "prodDatabaseType": "postgresql",
+    "reactive": true,
+    "serverPort": "8081",
+    "serviceDiscoveryType": "consul",
+    "skipUserManagement": true,
+    "testFrameworks": ["cypress"]
+  }
+}
