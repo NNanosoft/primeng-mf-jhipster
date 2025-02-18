@@ -30,7 +30,6 @@ module.exports = (config, options, targetOptions) => {
       './entity-routes': 'app/entities/entity.routes.ts',
     },
     shared: {
-      ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
       ...sharedDependencies,
       ...shareMappings(
         'app/config/input.constants',
