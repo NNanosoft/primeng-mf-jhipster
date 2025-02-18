@@ -11,6 +11,8 @@ import { IBlog } from '../blog.model';
 import { BlogService, EntityArrayResponseType } from '../service/blog.service';
 import { BlogDeleteDialogComponent } from '../delete/blog-delete-dialog.component';
 import { ButtonModule } from 'primeng/button';
+import { PrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
 
 @Component({
   selector: 'jhi-blog',
@@ -30,10 +32,12 @@ export class BlogComponent implements OnInit {
   protected readonly sortService = inject(SortService);
   protected modalService = inject(NgbModal);
   protected ngZone = inject(NgZone);
+  protected primeng = inject(PrimeNG);
 
   trackId = (item: IBlog): number => this.blogService.getBlogIdentifier(item);
 
   ngOnInit(): void {
+    this.primeng.theme.set({ preset: Aura });
     this.subscription = combineLatest([this.activatedRoute.queryParamMap, this.activatedRoute.data])
       .pipe(
         tap(([params, data]) => this.fillComponentAttributeFromRoute(params, data)),

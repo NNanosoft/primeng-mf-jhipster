@@ -23,6 +23,9 @@ import routes from './app.routes';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { NgbDateDayjsAdapter } from './config/datepicker-adapter';
 import { AppPageTitleStrategy } from './app-page-title-strategy';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
 
 const routerFeatures: RouterFeatures[] = [
   withComponentInputBinding(),
@@ -47,6 +50,12 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, ...routerFeatures),
     importProvidersFrom(BrowserModule),
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+      },
+    }),
     // Set this to true to enable service worker (PWA)
     importProvidersFrom(ServiceWorkerModule.register('ngsw-worker.js', { enabled: false })),
     importProvidersFrom(TranslationModule),
